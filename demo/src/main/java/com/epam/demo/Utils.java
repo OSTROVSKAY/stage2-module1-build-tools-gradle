@@ -9,7 +9,7 @@ public class Utils {
         if (args.contains(null) || args == null) return false;
 
         for(String str: args){
-            if (str.startsWith("-") || str.equals("0") || str.startsWith(" ") || str.equals("") || str == null ) return false;
+            if (str.startsWith("-") || str.equals("0") || str.startsWith(" ") || str.equals("") || str.equals(null) || str.equals("null") ) return false;
 
         }
         return true;
