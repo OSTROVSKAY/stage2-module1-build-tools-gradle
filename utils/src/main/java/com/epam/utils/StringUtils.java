@@ -1,10 +1,11 @@
 package com.epam.utils;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
 
-        if(str == null) return false;
-        return ( !(str.startsWith("-") || str.equals("0") || str.startsWith(" ") || str.equals("") || str.equals(null) || str.equals("null")));
+        return NumberUtils.isCreatable(str) && NumberUtils.toDouble(str) > 0;
 
          //here magic will happen
     }
